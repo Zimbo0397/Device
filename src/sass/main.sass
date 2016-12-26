@@ -1,0 +1,273 @@
+@import _mixins
+
+.chromeperfectpixel-initial-block iframe,
+#chromeperfectpixel-supported-by
+	display: none !important
+#__bs_notify__
+	display: none !important
+	opacity: 0 !important
+
+body
+	font: $font-stack
+	&::-webkit-scrollbar
+		height: 0
+		width: 0
+
+
+
+//----------------------------------
+// TEST
+//----------------------------------
+.top-menu
+	background: #000
+	color: #fff
+	text-align: right
+	padding-right: 4px
+	padding-top: 11px
+	height: 41px
+	.my-account
+		padding-right: 2px
+	li
+		margin-left: 34px
+	a
+		color: inherit
+		display: inline-block
+		&.acc-img
+			position: relative
+			padding-left: 30px
+			img
+				position: absolute
+				top: 2px
+				left: 8px
+
+.navigation
+	text-align: right
+	border-bottom: 1px solid #bebebe
+	.logo-holder
+		position: absolute
+		top: 17px
+		left: -3px
+		width: 50px
+		height: 50px
+	.nav-list
+		display: inline-block
+		vertical-align: top
+		margin-right: 37px
+		a
+			padding: 27px 25px
+			font-size: 1.4em
+			display: inline-block
+			color: $blue-font-color
+			&.plus
+				position: relative
+				padding-left: 29px
+				span
+					font-size: 1.5em
+					line-height: 1em
+					position: absolute
+					top: 27px
+					left: 1px
+			&.active,
+			&:hover
+				color: #000
+				background: #ebebeb
+
+
+	.search-holder
+		vertical-align: top
+		display: inline-block
+		padding-top: 27px
+		label
+			display: inline-block
+		.search-wrap
+			width: 230px
+			height: 32px
+			border-radius: 3px
+			background: #cecece
+			padding: 7px 31px 7px 7px
+			position: relative
+			margin-left: 5px
+			display: inline-block
+			input
+				width: 100%
+				background: transparent
+				outline: none
+				color: #949494
+			a
+				position: absolute
+				top: 7px
+				right: 9px
+			img
+
+
+
+
+.registered
+	padding-top: 30px
+	h3
+		font-weight: 400
+		font-size: 1.3em
+	.devices-table
+		table
+			width: 100%
+			font-size: 1em
+			border-collapse: collapse
+		tr
+			&:first-child
+				vertical-align: bottom
+				td
+					font-size: 0.88em
+					color: #a1a1a1
+					padding-bottom: 15px
+				&:hover
+					background: #fff
+			&:hover
+				background: #e2e2e2
+				.see-more
+					opacity: 1
+					pointer-events: inherit
+		td
+			min-width: 148px
+			border-bottom: 1px solid #e2e2e2
+			padding: 2px
+			&.desc
+				padding-left: 9px
+				font-size: 0.88em
+				padding-right: 20px
+			&.name
+				min-width: 196px
+				color: #000
+				span
+					padding-left: 20px
+					display: inline-block
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						top: 3px
+						right: 45px
+						border-left: 4px solid transparent
+						border-right: 4px solid black
+						border-top: 4px solid black
+						border-bottom: 4px solid transparent
+						transform: rotate(135deg)
+						z-index: 5
+			&.plan
+				text-align: center
+				font-size: 0.73em
+				color: #a1a1a1
+			&.status
+				text-align: center
+			.image-holder
+				max-width: 132px
+				background: url('../img/content/no-photo.jpg') no-repeat 50% 50%
+				min-height: 79px
+		.select-holder
+			text-align: center
+			width: 108px
+			position: relative
+			display: inline-block
+			&:before
+				content: ''
+				position: absolute
+				top: 32px
+				right: 8px
+				border-left: 4px solid transparent
+				border-right: 4px solid black
+				border-top: 4px solid black
+				border-bottom: 4px solid transparent
+				-webkit-transform: rotate(135deg)
+				-ms-transform: rotate(135deg)
+				transform: rotate(135deg)
+			span
+				display: inline-block
+				margin-bottom: 5px
+				position: relative
+				top: -4px
+			select
+				width: 100%
+				padding-right: 20px
+				font-size: 1em
+				height: 23px
+				padding-left: 10px
+				border-radius: 3px
+				background: #efefef
+				border: none
+				outline: none
+				color: $blue-font-color
+		.status-icon
+			display: inline-block
+			height: 19px
+			width: 19px
+			border-radius: 50%
+			position: relative
+			top: 3px
+			position: relative
+			&.st-red
+				background: #ed1c24
+			&.st-green
+				background: #00a651
+			&.st-gray
+				background: #959595
+			&.low
+				&:after
+					content: ''
+					position: absolute
+					height: 10px
+					width: 22px
+					top: 5px
+					right: -43px
+					background: url(../img/icons/batt-ico.png) no-repeat
+			.see-more
+				display: inline-block
+				position: absolute
+				top: 1px
+				right: -59px
+				opacity: 0
+				pointer-events: none
+				width: 10px
+				span
+					display: block
+					background: #009fdb
+					height: 4px
+					width: 4px
+					border-radius: 50%
+					margin: 0 auto
+					margin-bottom: 2px
+	.btn-holder
+		margin-top: 22px
+		text-align: center
+		a
+			font-size: 1.2em
+			color: $blue-font-color
+
+
+
+.footer
+	background: #cdcdcd
+	margin-top: 99px
+	padding-top: 35px
+	padding-bottom: 20px
+	font-size: 0.88em
+	p
+		color: #fff
+	.foot-nav
+		position: absolute
+		top: 0
+		right: 0
+		li
+			margin-left: 6px
+			vertical-align: middle
+			.separator
+				display: inline-block
+				height: 12px
+				border-right: 2px solid #fff
+				vertical-align: middle
+			a
+				color: #fff
+				font-size: 0.88em
+//----------------------------------
+// END TEST
+//----------------------------------
+
+
