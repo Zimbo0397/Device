@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru')
+	head
+		title greatest page
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.login-area
+			.container
+				.d-form
+					h2 Password  Reset
+					.reset-body
+						form(action="")
+							label(for="")
+								|Enter your username, email
+								br
+								|or phone number
+							input(type="text")
+					a(href="#").btn Restore password
+
+								
+
+
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade

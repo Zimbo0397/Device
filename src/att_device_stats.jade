@@ -1,0 +1,339 @@
+doctype html
+html(lang='ru')
+	head
+		title greatest page
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.att-device
+			.container.content
+				h2 Device Serial  No:  5086496416
+					a(href="#").info
+
+				.dev-head
+					.inline-layout.col-2
+						ul.inline-layout.nav-links
+							li
+								a(href="#") Device
+							li
+								a(href="#").active Statistics
+						ul.edit.inline-layout
+							li
+								a(href="#") Edit device
+							li
+								a(href="#") Remove device
+				.dev-content.stats
+					.text-content
+						.text-item
+							h6 Name
+							h2 Yacht: Princess Viking
+							.reg-sin
+								span Registered since
+								p 23.12.2016
+
+		section.statistics.cust
+			.container.content
+				.statistics-holder
+					.st-item
+						h5 SMS Count and Traffic Spent
+						.st-head.type-2
+							.piker-holder
+								.date-piker.first
+									input.ui-piker
+								.date-piker
+									input.ui-piker
+						.data-holder.stat
+							table.close
+								tbody
+									tr
+										td
+										td To Device
+										td From Device
+										td Total
+									tr.spend
+										td
+											span SMS Count
+										td 34
+										td 37
+										td 71
+									mixin newTablItem(count, to, from1, total)
+										tr
+											td= count
+											td= to
+											td= from1
+											td= total
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									tr
+										td
+											a(href="#").t-btn more...
+							table.close
+								tbody
+									tr.spend
+										td
+											span Traffic Spent
+										td 34
+										td 37
+										td 71
+									mixin newTablItem(count, to, from1, total)
+										tr
+											td= count
+											td= to
+											td= from1
+											td= total
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									+newTablItem(
+										'2016-21-12',
+										'7',
+										'8',
+										'15'
+									)
+									tr
+										td
+											a(href="#").t-btn more...
+
+
+
+					.st-item
+						h5  Log
+						.st-head.type-2
+							.piker-holder
+								.select-holder
+									select#sel3(name="")
+										option(value="1") Alerts Only
+										option(value="2") Alerts Only
+										option(value="3") Alerts Only
+										option(value="4") Alerts Only
+										option(value="5") Alerts Only
+										option(value="6") Alerts Only
+								.date-piker.first
+									input.ui-piker
+								.date-piker
+									input.ui-piker
+						.data-holder.log
+							table
+								tbody
+									mixin newTablItem(count, to, from1, total, ttl)
+										tr
+											td= count
+											td= to
+											td= from1
+											td= total
+											td= ttl
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+									+newTablItem(
+										'2016-21-12 09:30:27',
+										'OUT',
+										'Alert',
+										'Device left its fence area.',
+										'Yacht: Princess Viking'
+									)
+
+
+
+					.st-item
+						h5  Position
+						.map-holder
+							#map
+								
+					.btn-holder
+						a(href="#") Close
+
+								
+
+
+
+								
+
+
+		include ./partials/footer.jade
+		include ./partials/gmaps.jade
+		include ./partials/scripts.jade
+		include ./partials/maps-all-dev.jade
+

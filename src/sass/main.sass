@@ -97,23 +97,24 @@ body
 				position: absolute
 				top: 7px
 				right: 9px
-			img
+				height: 21px
+				width: 18px
+				background: url(../img/icons/search-ico.png) 50% 50% no-repeat
 
 
 
 
 .registered
 	padding-top: 30px
-	h3
-		font-weight: 400
-		font-size: 1.3em
 	.devices-table
 		table
 			width: 100%
 			font-size: 1em
 			border-collapse: collapse
 		tr
+			cursor: pointer
 			&:first-child
+				cursor: inherit
 				vertical-align: bottom
 				td
 					font-size: 0.88em
@@ -237,6 +238,7 @@ body
 	.btn-holder
 		margin-top: 22px
 		text-align: center
+		padding-bottom: 180px
 		a
 			font-size: 1.2em
 			color: $blue-font-color
@@ -271,3 +273,490 @@ body
 //----------------------------------
 
 
+.statistics
+	margin-top: 40px
+	&.cust
+		margin-top: 0
+		.statistics-holder
+			margin-top: 0
+			padding-bottom: 10px
+			border: none
+	.statistics-holder
+		margin-top: 23px
+		border-top: 1px solid #e2e2e2
+		padding-top: 19px
+		h5
+			font-size: 1em
+			font-weight: 400
+			color: #959595
+		.st-head
+			position: relative
+			padding-left: 275px
+			text-align: right
+			padding-top: 10px
+			&.type-2
+				padding-left: 0
+				text-align: left
+		.date-piker,
+		.select-holder
+			height: 43px
+			border: 1px solid #d4d4d4
+			border-radius: 3px
+			display: inline-block
+		.select-holder
+			position: absolute
+			left: 0
+			top: 9px
+			width: 100%
+			max-width: 273px
+			select
+				width: 100%
+				padding: 8px 23px 6px 10px
+				font-size: 1.3em
+				border: none
+				outline: none
+			&:after
+				content: ''
+				position: absolute
+				top: 13px
+				right: 11px
+				border-left: 5px solid transparent
+				border-right: 5px solid #009fdb
+				border-top: 5px solid #009fdb
+				border-bottom: 5px solid transparent
+				-webkit-transform: rotate(135deg)
+				-ms-transform: rotate(135deg)
+				transform: rotate(135deg)
+		.date-piker
+			position: relative
+			background: url(../img/icons/celendar-ico.png) no-repeat 94% 37%
+			min-width: 219px
+			width: 219px
+			text-align: left
+			input
+				outline: none
+				height: 40px
+				padding: 10px
+				background: transparent
+				font-size: 1.3em
+			&.first
+				position: relative
+				margin-right: 24px
+				&:after
+					content: ''
+					position: absolute
+					top: 21px
+					right: -26px
+					height: 2px
+					width: 19px
+					background: #000
+		.piker-holder
+			.select-holder
+				position: relative
+				top: 0
+				width: 168px
+				display: inline-block
+				vertical-align: bottom
+				&:after
+					content: ''
+					position: absolute
+					top: 13px
+					right: 11px
+					border-left: 4px solid transparent
+					border-right: 4px solid #000
+					border-top: 4px solid #000
+					border-bottom: 4px solid transparent
+					-webkit-transform: rotate(135deg)
+					-ms-transform: rotate(135deg)
+					transform: rotate(135deg)
+
+	.st-item
+		margin-bottom: 31px
+	.data-holder
+		background: #f5f5f5
+		margin-top: 17px
+		padding-top: 30px
+		border-bottom: 2px solid #e2e2e2
+		padding-bottom: 28px
+		padding-left: 30px
+		table
+			width: 100%
+		
+		&.stat
+			padding-left: 123px
+			table
+				font-size: 1em
+				border-collapse: collapse
+				max-width: 700px
+				tr
+					td
+						width: 28%
+						&:last-child
+							width: 16%
+						&:first-child
+							padding-left: 20px
+					&:last-child
+						td
+							padding-bottom: 20px
+				&.close
+					tr
+						&:nth-child(1n+5)
+							display: none
+						&:last-child
+							display: inherit
+			tr
+				&:first-child
+					font-size: 0.88em
+					td
+						padding-bottom: 3px
+				&.spend
+					font-size: 1.2em
+					td
+						border-top: 1px solid #e2e2e2
+						padding-top: 26px
+						padding-bottom: 9px
+						&:first-child
+							padding-left: 0
+					span
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							top: 3px
+							left: -19px
+							height: 5px
+							width: 5px
+							border-left: 3px solid transparent
+							border-right: 3px solid #009fdb
+							border-top: 3px solid #009fdb
+							border-bottom: 3px solid transparent
+							-webkit-transform: rotate(135deg)
+							-ms-transform: rotate(135deg)
+							transform: rotate(135deg)
+
+
+				td
+					padding: 3px
+			.t-btn
+				color: $blue-font-color
+
+		&.log
+			td
+				padding-right: 40px
+
+	.map-holder
+		min-height: 150px
+		margin-top: 10px
+		#map
+			height: 350px
+			width: 100%
+	.chek-holder
+		.checkbox
+			margin-top: 10px
+			label
+				font-size: 1.2em
+				padding-left: 25px !important
+
+	.btn-holder
+		text-align: center
+		a
+			color: $blue-font-color
+			font-size: 1.3em
+
+
+.login-area
+	text-align: center
+	margin-top: 40px
+	min-height: 100vh
+	.d-form
+		display: inline-block
+		width: 100%
+		max-width: 342px
+		h2
+			margin-bottom: 23px
+		.reset-body
+			border-top: 1px solid #e2e2e2
+			border-bottom: 1px solid #e2e2e2
+			padding: 30px 27px
+			padding-bottom: 49px
+			text-align: left
+			label
+				text-align: left
+				display: inline-block
+				width: 100%
+				color: #9c9c9c
+			input
+				margin-top: 9px
+				height: 45px
+				padding: 12px
+				font-size: 1.5em
+				border: 1px solid #cccccc
+				border-radius: 3px
+				outline: none
+				width: 100%
+			.form-group
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+		.btn
+			color: $blue-font-color
+			font-size: 1.6em
+			margin-top: 22px
+			display: inline-block
+		.eye
+			position: absolute
+			top: 1px
+			right: 0
+			height: 22px
+			width: 24px
+			background: red
+			background: url(../img/icons/form-view-icon.png) 50% 50% no-repeat
+		.forgot
+			display: inline-block
+			margin-top: 16px
+			color: $blue-font-color
+
+.att-device
+	padding-top: 41px
+	.info
+		display: inline-block
+		width: 19px
+		height: 19px
+		margin-left: 17px
+		vertical-align: middle
+		background: url(../img/icons/i.png) 50% 50% no-repeat
+		position: relative
+		top: -2px
+	.low
+		font-size: 0.5em
+		vertical-align: middle
+		display: inline-block
+		line-height: 1em
+		margin-left: 52px
+		padding-left: 31px
+		background: url(../img/icons/batt-ico.png) 4% 50% no-repeat
+		color: #ed1c24
+	.dev-head
+		margin-top: 31px
+		border-bottom: 1px solid #e2e2e2
+	.nav-links
+		vertical-align: botom
+		a
+			color: $blue-font-color
+			height: 33px
+			display: inline-block
+			padding: 6px
+			width: 150px
+			text-align: center
+			font-size: 1.2em
+			&:hover
+				background: #ebebeb
+				color: #000
+			&.active
+				background: #ebebeb
+				color: #000
+	.edit
+		text-align: right
+		vertical-align: bottom
+		position: relative
+		top: -4px
+		li
+			margin-left: 39px
+		a
+			color: $blue-font-color
+	.dev-content
+		border-bottom: 1px solid #e2e2e2
+		&.stats
+			.text-item
+				max-width: 100%
+		.image-content
+			text-align: right
+			.image-holder
+				margin-top: 28px
+				max-height: 300px
+				position: relative
+			.image-man
+				padding-top: 17px
+				a
+					display: inline-block
+					vertical-align: middle
+					color: $blue-font-color
+					&.close
+						width: 20px
+						height: 20px
+						margin-left: 29px
+						background: url(../img/icons/closebtn-ico.png) 50% 50% no-repeat
+		.text-item
+			padding-top: 12px
+			max-width: 408px
+			padding-bottom: 24px
+			border-bottom: 1px solid #e2e2e2
+			position: relative
+			&.status
+				padding-right: 100px
+				padding-bottom: 25px
+				h2
+					margin-top: 17px
+			h6
+				font-size: 1em
+				margin-top: 3px
+				font-weight: 400
+				color: #959595
+			h2
+				font-size: 1.86em
+				margin-top: 6px
+				small
+					font-size: 0.55em
+			p
+				font-size: 1.2em
+				margin-top: 5px
+				line-height: 1.4em
+				&.small
+					font-size: 0.73em
+					margin-top: 8px
+			.al-status
+				position: absolute
+				top: 19px
+				right: 0
+				width: 105px
+				span
+					font-size: 1em
+				p
+					font-size: 0.7em
+					padding-left: 40px
+					margin-top: 12px
+					position: relative
+					.ico
+						display: inline-block
+						position: absolute
+						top: -3px
+						left: -1px
+						height: 32px
+						width: 32px
+						background: #ed1c24
+						border-radius: 50%
+						&.green
+							background: green
+			.item-nav
+				margin-top: 15px
+				li
+					margin-right: 46px
+					a
+						color: $blue-font-color
+			.reg-sin
+				position: absolute
+				top: 14px
+				right: 0
+				text-align: right
+
+.att-new
+	padding-top: 40px
+	h2
+		position: relative
+	.info
+		display: inline-block
+		width: 19px
+		height: 19px
+		margin-left: 17px
+		vertical-align: middle
+		background: url(../img/icons/i.png) 50% 50% no-repeat
+		position: absolute
+		top: 0
+		right: -2px
+		top: 1px
+	.add-body
+		padding-top: 23px
+	.form-groups
+		padding-right: 6px
+	.form-group
+		padding-top: 20px
+		label
+			color: #aaaaaa
+			display: block
+			position: relative
+			&.important
+				&:before
+					content: '*'
+					position: absolute
+					top: -2px
+					left: -12px
+					font-size: 1.2em
+					color: red
+		input,
+		textarea
+			width: 100%
+			height: 45px
+			border: 1px solid #cccccc
+			border-radius: 3px
+			margin-top: 4px
+			padding: 10px
+			outline: none
+			font-size: 1.7em
+		textarea
+			height: 130px
+			padding: 10px
+			font-size: 1.2em
+	.img-upload
+		padding-top: 18px
+		padding-left: 35px
+		.image-holder
+			height: 259px
+			background: url(../img/content/no-photo-full.jpg) 50% 50% no-repeat
+		label
+			color: #aaaaaa
+			display: block
+			position: relative
+			margin-bottom: 4px
+			
+		input
+			font-size: 12px
+			width: 250px
+			display: inline-block
+			vertical-align: middle
+		.form-group
+			padding-top: 9px
+			a
+				display: inline-block
+				vertical-align: middle
+				margin-left: 10px
+				margin-bottom: 0
+				line-height: 1em
+				color: $blue-font-color
+				&.close
+					width: 20px
+					height: 20px
+					margin-left: 49px
+					background: url(../img/icons/closebtn-ico.png) 50% 50% no-repeat
+	.radios
+		li
+			margin-right: 60px
+		h5
+			margin-top: 30px
+			font-size: 1.2em
+			margin-bottom: 15px
+			font-weight: 400
+		label
+			font-size: 1.25em
+			padding-left: 30px !important
+	.coords
+		margin-top: 30px
+		li
+			margin-right: 20px
+			vertical-align: middle
+		label
+			display: block
+		input
+			height: 40px
+			padding: 10px
+			border: 1px solid #cccccc
+			border-radius: 3px
+			outline: none
+		.position
+			padding-top: 20px
+			a
+				position: relative
+				vertical-align: middle
+				color: $blue-font-color
+				display: inline-block
+				padding-left: 20px
+				background: url(../img/icons/targ-ico.png) 0% 50% no-repeat

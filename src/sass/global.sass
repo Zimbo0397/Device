@@ -47,10 +47,13 @@ ul
 h1, h2, h3, h4, h5, h6
 h1
 h2
+	font-weight: 400
+	font-size: 1.4em
 h3
+	font-weight: 400
+	font-size: 1.3em
 h5
 h6
-
 hr
 	border: 0
 	display: block
@@ -119,22 +122,23 @@ input
 		position: relative
 		padding-left: 36px
 	&:not(:checked) + label:before, &:checked + label:before
-		background: #eee
+		background: #fff
 		content: ''
-		border: 1px solid #383838
+		border: 1px solid #009fdb
 		left: 0
-		top: 2px
+		top: 0px
 		position: absolute
 		width: 17px
 		height: 17px
+		border-radius: 3px
 	&:not(:checked) + label:after, &:checked + label:after
-		border: 2px solid #000
+		border: 2px solid #009fdb
 		border-left-color: transparent
 		border-top-color: transparent
 		content: ''
 		color: #000
 		position: absolute
-		top: 2px
+		top: 0px
 		left: 7px
 		font-size: 18px
 		transition: all .2s
@@ -176,19 +180,19 @@ input
 	&:not(:checked) + label:before, &:checked + label:before
 		//background: #eee
 		border-radius: 50%
-		border: 2px solid #000
+		border: 2px solid #009fdb
 		content: ''
 		left: 0
-		top: 2px
+		top: -2px
 		position: absolute
 		width: 18px
 		height: 18px
 	&:not(:checked) + label:after, &:checked + label:after
 		content: ''
-		background-color: #000
+		background-color: #009fdb
 		border-radius: 50%
 		position: absolute
-		top: 7px
+		top: 3px
 		left: 5px
 		width: 12px
 		height: 12px
@@ -252,6 +256,8 @@ input
 	margin: 0 auto
 	max-width: 1140px
 	position: relative
+	&.content
+		max-width: 950px
 	@media #{$media-lg-max}
 		width: 100%
 		padding: 0 20px

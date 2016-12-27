@@ -1,0 +1,93 @@
+doctype html
+html(lang='ru')
+	head
+		title att_new_device
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.att-new
+			.container.content
+				h2 Add Device
+					a(href="#").info
+				.add-body
+					.inline-layout.col-2
+						.form-groups
+							.form-group
+								label(for="").important Device Serial No
+								input(type="text")
+							.form-group
+								label(for="").important Name
+								input(type="text")
+							.form-group
+								label(for="") Description
+								textarea#text2
+						.img-upload
+							label(for="") Asset Image
+							.image-holder
+							.form-group.inline-layout
+								input(type="file", placeholder="file..")
+								a(href="#") Upload image
+								a(href="#").close
+				.add-body
+					.radios
+						h5 Asset Plan
+						ul.inline-layout
+							li
+								.radio
+									input#che1(type="radio")
+									label(for="che1") Do Nothing
+							li
+								.radio
+									input#che2(type="radio")
+									label(for="che2") Stay in Fance
+							li
+								.radio
+									input#che3(type="radio")
+									label(for="che3") Don`t Move
+							li
+								.radio
+									input#che4(type="radio")
+									label(for="che4") Track History
+					.coords
+						ul.inline-layout
+							li
+								label(for="") Latitude
+								input(type="text")
+							li
+								label(for="") Longitude
+								input(type="text")
+							li
+								label(for="") Radius(m)
+								input(type="text")
+							li.position
+								a(href="#") Current  Device Position
+								
+
+		section.statistics.cust
+			.container.content
+				.statistics-holder
+					.st-item
+						h5  Position
+						.map-holder
+							#map
+								
+					.btn-holder
+						a(href="#") Close
+
+								
+
+
+
+								
+
+
+		include ./partials/footer.jade
+		include ./partials/gmaps.jade
+		include ./partials/scripts.jade
+		include ./partials/maps-all-dev.jade
+

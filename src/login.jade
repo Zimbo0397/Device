@@ -1,0 +1,34 @@
+doctype html
+html(lang='ru')
+	head
+		title greatest page
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.login-area
+			.container
+				.d-form
+					h2 Login
+					.reset-body
+						form(action="")
+							.form-group
+								label(for="") Username
+								input(type="text")
+							.form-group
+								label(for="") Password
+								input(type="text")
+								a(href="#").eye
+								a(href="#").forgot Forgot your password?
+					a(href="#").btn Login
+
+								
+
+
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade

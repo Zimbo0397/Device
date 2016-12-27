@@ -1,0 +1,87 @@
+doctype html
+html(lang='ru')
+	head
+		title att_one_device
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.att-device
+			.container.content
+				h2 Device Serial  No:  5086496416
+					a(href="#").info
+					span.low Low battery
+
+				.dev-head
+					.inline-layout.col-2
+						ul.inline-layout.nav-links
+							li
+								a(href="#").active Device
+							li
+								a(href="#") Statistics
+						ul.edit.inline-layout
+							li
+								a(href="#") Edit device
+							li
+								a(href="#") Remove device
+				.dev-content
+					.inline-layout.col-2
+						.text-content
+							.text-item
+								h6 Name
+								h2 Yacht: Princess Viking
+							.text-item
+								h6 Description
+								p
+									|Yacht: Value $1,850,000 - Naples,FL 2007 Princess - Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25
+							.text-item.status
+								h6 Asset Plan
+								h2 Stay In Fence
+								.al-status
+									span Alarm Status
+									p Asset left  its fence area!
+										span.ico
+							.text-item
+								h6 Commands
+								h2
+									small Accepts Commands Now: 
+									|  NO
+								p.small
+									|Connect device to charger to let it handle commands (change asset plan, etc.) without a delay. Otherwise the command will be queued before device is waked up.
+								ul.inline-layout.item-nav
+									li
+										a(href="#") Get status
+									li
+										a(href="#") Change Plan
+									li
+										a(href="#") Advances
+						.image-content
+							.image-holder
+								img(src="img/content/yacht-full.jpg", alt="")
+							.image-man
+								a(href="#").uplo Upload image
+								a(href="#").close
+					
+
+				.statistics.cust
+					.statistics-holder
+						.st-item
+							h5  Position
+							.map-holder
+								#map
+					.btn-holder
+						a(href="#") Close
+
+
+								
+
+
+		include ./partials/footer.jade
+		include ./partials/gmaps.jade
+		include ./partials/scripts.jade
+		include ./partials/maps-all-simp.jade
+
