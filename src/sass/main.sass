@@ -651,6 +651,8 @@ body
 
 .att-new
 	padding-top: 40px
+	&.w-map
+		padding-top: 0
 	h2
 		position: relative
 	.info
@@ -683,7 +685,8 @@ body
 					font-size: 1.2em
 					color: red
 		input,
-		textarea
+		textarea,
+		select
 			width: 100%
 			height: 45px
 			border: 1px solid #cccccc
@@ -699,6 +702,26 @@ body
 	.img-upload
 		padding-top: 18px
 		padding-left: 35px
+		.fake-input	
+			font-size: 12px
+			width: 250px
+			display: inline-block
+			vertical-align: middle
+			height: 45px
+			border: 1px solid #cccccc
+			border-radius: 3px
+			margin-top: 4px
+			padding: 13px
+			position: relative
+			span
+				font-size: 1.7em
+				color: #bebdbd
+			input
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+
 		.image-holder
 			height: 259px
 			background: url(../img/content/no-photo-full.jpg) 50% 50% no-repeat
@@ -745,12 +768,16 @@ body
 			vertical-align: middle
 		label
 			display: block
+			margin-bottom: 6px
+			color: #6b6b6b
 		input
-			height: 40px
+			height: 35px
 			padding: 10px
 			border: 1px solid #cccccc
 			border-radius: 3px
 			outline: none
+			max-width: 128px
+
 		.position
 			padding-top: 20px
 			a
@@ -760,3 +787,216 @@ body
 				display: inline-block
 				padding-left: 20px
 				background: url(../img/icons/targ-ico.png) 0% 50% no-repeat
+
+
+.advan-sett
+	a
+		color: $blue-font-color
+		text-decoration: underline
+		display: inline-block
+	p
+		color: #ed1c24
+		margin-top: 21px
+		margin-bottom: 10px
+	.lists
+		max-width: 880px
+	.left-set
+		padding-right: 71px
+	.form-group
+		position: relative
+		padding-right: 80px
+		input,
+		select
+			position: absolute
+			top: 9px
+			right: 0
+			width: 79px
+			height: 35px
+			padding: 8px
+			font-size: 1.2em
+		label
+			span
+				font-size: 0.7em
+	.right-set
+		padding-right: 60px
+		li
+			margin-bottom: 4px
+		.select-holder
+			position: relative
+			display: inline-block
+			position: absolute
+			top: 1px
+			right: 0
+			&:after
+				content: ''
+				position: absolute
+				top: 23px
+				right: 11px
+				border-left: 4px solid transparent
+				border-right: 4px solid #000
+				border-top: 4px solid #000
+				border-bottom: 4px solid transparent
+				-webkit-transform: rotate(135deg)
+				-ms-transform: rotate(135deg)
+				transform: rotate(135deg)
+		select
+			width: 148px
+			padding: 7px
+			font-size: 1em
+			padding-right: 23px
+	.btns
+		margin-top: 37px
+		border-top: 1px solid #cacaca
+		padding-top: 29px
+		text-align: center
+	.addbtn
+		display: inline-block
+		width: 354px
+		background: $blue-font-color
+		color: #fff
+		font-size: 1.7em
+		text-align: center
+		height: 46px
+		padding: 5px
+		border-radius: 3px
+
+.account
+	padding-top: 40px
+	&.my-acc
+		.acc-item
+			label
+				top: 13px
+				left: 0
+			.item-block
+				&.right
+					text-align: left
+
+	h2
+		margin-bottom: 23px
+	h3
+		margin-bottom: 18px
+		font-size: 1.2em
+	.change
+		font-size: 1.3em
+		color: $blue-font-color
+		margin-top: 10px
+		display: inline-block
+	.acc-item
+		padding-top: 36px
+		border-top: 1px solid #e2e2e2
+		padding-bottom: 33px
+		&.pass
+			.form-group
+				max-width: 330px
+				.in-nav
+					top: -19px
+					right: 3px
+					height: 18px
+					width: 18px
+					a
+						margin: 0
+			input
+				height: 35px
+				margin-top: 7px
+				font-size: 1em
+		.item-block
+			&.left
+				padding-right: 35px
+			&.right
+				text-align: right
+				ul
+					max-width: 416px
+					display: inline-block
+					&.full
+						max-width: 100%
+						width: 100%
+
+		.form-group
+			padding-left: 152px
+			position: relative
+			.in-nav
+				position: absolute
+				display: inline-block
+				top: 16px
+				right: -64px
+				a
+					display: inline-block
+					height: 20px
+					width: 20px
+					margin-left: 9px
+					&.eye
+						background: url(../img/icons/form-view-icon.png) 50% 50% no-repeat
+					&.info
+						background: url(../img/icons/q.png) 50% 50% no-repeat
+		li
+			margin-bottom: 6px
+		label
+			color: #aaaaaa
+			display: block
+			position: absolute
+			left: 1px
+			top: 20px
+			&.important
+				&:before
+					content: '*'
+					position: absolute
+					top: -4px
+					left: -12px
+					font-size: 1.2em
+					color: red
+		input
+			width: 100%
+			height: 45px
+			border: 1px solid #cccccc
+			border-radius: 3px
+			margin-top: 4px
+			padding: 10px
+			outline: none
+			font-size: 1.7em
+		&.action
+			ul
+				max-width: 328px
+			label
+				top: 3px
+			input
+				height: 35px
+				margin-top: 7px
+				font-size: 1em
+			p
+				font-size: 1.3em
+				margin-bottom: 11px
+				position: relative
+				.del
+					position: absolute
+					top: 7px
+					right: -25px
+					height: 10px
+					width: 10px
+					background: url(../img/icons/closebtn-ico.png) 50% 50% no-repeat
+					background-size: contain
+			.labels-mass
+				text-align: left
+			.add-mass
+				position: relative
+				.add-btn
+					position: absolute
+					top: 14px
+					right: -30px
+					height: 20px
+					width: 20px
+					background: url(../img/icons/add-bnt.png) 50% 50% no-repeat
+					background-size: contain
+		.input-in
+			width: 100%
+			height: 45px
+			border-radius: 3px
+			margin-top: 4px
+			padding: 10px
+			outline: none
+			font-size: 1.5em
+		.bts	
+			text-align: center
+			a
+				font-size: 1.6em
+				color: $blue-font-color
+

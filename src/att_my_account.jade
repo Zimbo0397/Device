@@ -1,0 +1,134 @@
+doctype html
+html(lang='ru')
+	head
+		title My Acoount
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.account.my-acc
+			.container.content
+				h2 My Account
+				.acc-item
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										label(for="") Username
+										.input-in
+											p JGolt1985
+								li
+									.form-group
+										label(for="") First Name
+										.input-in
+											p Joahn
+								li
+									.form-group
+										label(for="") Last Name
+										.input-in
+											p Golt
+						.item-block.right
+							ul
+								li
+									.form-group
+										label(for="") Email
+										.input-in
+											p j.golt@gmail.com
+								li
+									.form-group
+										label(for="") Phone
+										.input-in
+											p 617-355-6000
+								li
+									.form-group
+										label(for="") Organization
+										.input-in
+											p Golt Brothers
+				.acc-item
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										label(for="") Nomber of devices
+										.input-in
+											p 18
+						.item-block.right
+							ul
+								li
+									.form-group
+										label(for="") Active devices
+										.input-in
+											p 14
+				.acc-item.action
+					h3 Alerting
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										.labels-mass
+											p 617-355-6000
+												a(href="#").del
+											p 617-355-6034
+												a(href="#").del
+										label(for="") E-mail to Address
+										.add-mass
+											input(type="text")
+											a(href="#").add-btn
+						.item-block.right
+							ul.full
+								li
+									.form-group
+										.labels-mass
+											p j.golt@gmail.com
+												a(href="#").del
+										label(for="") E-mail to Address
+										.add-mass
+											input(type="text")
+											a(href="#").add-btn
+				.acc-item.pass
+					h3 Change Password
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										label(for="") Username
+										input(type="text")
+										.in-nav
+											a(href="#").eye
+								li
+									.form-group
+										label(for="") Password
+										input(type="text")
+								li
+									.form-group
+										label(for="") Password Again
+										input(type="text")
+								li
+									.form-group
+										a(href="#").change Change
+
+				.acc-item
+					.bts
+						a(href="#") Close
+									
+						
+
+
+
+
+
+
+								
+
+
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade

@@ -1,0 +1,105 @@
+doctype html
+html(lang='ru')
+	head
+		title Create Acoount
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/header.jade
+		
+		section.account
+			.container.content
+				h2 Create Account
+				.acc-item
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										label(for="").important Username
+										input(type="text")
+								li
+									.form-group
+										label(for="").important Password
+										input(type="text")
+										.in-nav
+											a(href="#").eye
+											a(href="#").info
+								li
+									.form-group
+										label(for="").important Password Again
+										input(type="text")
+				.acc-item
+					h3 Contact Information
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										label(for="").important First Name
+										input(type="text")
+								li
+									.form-group
+										label(for="") Last Name
+										input(type="text")
+						.item-block.right
+							ul
+								li
+									.form-group
+										label(for="").important Email
+										input(type="text")
+								li
+									.form-group
+										label(for="").important Phone
+										input(type="text")
+								li
+									.form-group
+										label(for="") Organization
+										input(type="text")
+				.acc-item.action
+					h3 Alerting
+					.inline-layout.col-2
+						.item-block.left
+							ul
+								li
+									.form-group
+										.labels-mass
+											p 617-355-6000
+												a(href="#").del
+											p 617-355-6034
+												a(href="#").del
+										label(for="") E-mail to Address
+										.add-mass
+											input(type="text")
+											a(href="#").add-btn
+						.item-block.right
+							ul.full
+								li
+									.form-group
+										.labels-mass
+											p j.golt@gmail.com
+												a(href="#").del
+										label(for="") E-mail to Address
+										.add-mass
+											input(type="text")
+											a(href="#").add-btn
+				.acc-item
+					.bts
+						a(href="#") Create
+									
+						
+
+
+
+
+
+
+								
+
+
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade

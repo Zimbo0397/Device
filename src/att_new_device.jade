@@ -30,7 +30,9 @@ html(lang='ru')
 							label(for="") Asset Image
 							.image-holder
 							.form-group.inline-layout
-								input(type="file", placeholder="file..")
+								.fake-input
+									span File...
+									input(type="file", placeholder="file..")
 								a(href="#") Upload image
 								a(href="#").close
 				.add-body
@@ -39,31 +41,31 @@ html(lang='ru')
 						ul.inline-layout
 							li
 								.radio
-									input#che1(type="radio")
+									input#che1(type="radio", name="radio1")
 									label(for="che1") Do Nothing
 							li
 								.radio
-									input#che2(type="radio")
+									input#che2(type="radio", name="radio1")
 									label(for="che2") Stay in Fance
 							li
 								.radio
-									input#che3(type="radio")
+									input#che3(type="radio", name="radio1")
 									label(for="che3") Don`t Move
 							li
 								.radio
-									input#che4(type="radio")
+									input#che4(type="radio", name="radio1")
 									label(for="che4") Track History
 					.coords
 						ul.inline-layout
 							li
 								label(for="") Latitude
-								input(type="text")
+								input#lat.coordsInput(type="number")
 							li
 								label(for="") Longitude
-								input(type="text")
+								input#lng.coordsInput(type="number")
 							li
 								label(for="") Radius(m)
-								input(type="text")
+								input#radius.coordsInput(type="number")
 							li.position
 								a(href="#") Current  Device Position
 								
@@ -72,12 +74,61 @@ html(lang='ru')
 			.container.content
 				.statistics-holder
 					.st-item
-						h5  Position
 						.map-holder
 							#map
-								
-					.btn-holder
-						a(href="#") Close
+
+		section.att-new.w-map
+			.container.content
+				.advan-sett
+					a(href="#") Advanced Settings
+
+					p.warning We recommend leave these settings untouched if you are not confident
+
+					.lists.inline-layout.col-2
+						.left-set
+							ul
+								li
+									.form-group
+										label(for="") Delay before applying plan change 
+											span  (minutes) 
+										input(type="text")
+								li
+									.form-group
+										label(for="") Connection frequency 
+											span  (minutes) 
+										input(type="text")
+						.right-set
+							ul
+								li
+									.form-group
+										label(for="") Modem in non-connected state
+										.select-holder
+											select#del34(name="der")
+												option(value="1") Pover-saving
+												option(value="2") Pover-saving
+												option(value="3") Pover-saving
+												option(value="4") Pover-saving
+								li
+									.form-group
+										label(for="") Allow cellular positioning
+										.select-holder
+											select#del34(name="der")
+												option(value="1") Yes
+												option(value="2") No
+												option(value="3") No
+												option(value="4") No
+								li
+									.form-group
+										label(for="") Allow “normal” SMS from device
+										.select-holder
+											select#del34(name="der")
+												option(value="1") Yes
+												option(value="2") No
+												option(value="3") No
+												option(value="4") No
+					.btns
+						a(href="#").addbtn Add
+
 
 								
 
@@ -89,5 +140,5 @@ html(lang='ru')
 		include ./partials/footer.jade
 		include ./partials/gmaps.jade
 		include ./partials/scripts.jade
-		include ./partials/maps-all-dev.jade
+		include ./partials/maps-position.jade
 
