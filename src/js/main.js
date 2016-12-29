@@ -31,7 +31,14 @@ $(window).on('load', function() {
 		})
 	});
 
+	$('#sett-btn').on('click', function(e) {
+		e.preventDefault();
+		$('#sett-container').toggleClass('open');
+	});
 
+	$('#mobile-nav-btn').on('click', function() {
+		$('#nav-list').toggleClass('open')
+	});
 	
 });
 

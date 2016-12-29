@@ -63,6 +63,20 @@ hr
 	margin-top: 60px
 	margin-bottom: 60px
 
+h1, h2, h3, h4, h5, h6
+	&.back
+		position: relative
+		@media #{$media-lg-max}
+			padding-left: 50px
+		.back-arr
+			height: 23px
+			width: 12px
+			background: url(../img/icons/back_arr.png) 50% 50% no-repeat
+			position: absolute
+			top: 0
+			left: -36px
+			@media #{$media-lg-max}
+				left: 14px
 label
 	border-radius: 0
 

@@ -1,7 +1,7 @@
 doctype html
 html(lang='ru')
 	head
-		title greatest page
+		title Device stats
 
 		include ./partials/head.jade
 
@@ -12,16 +12,16 @@ html(lang='ru')
 		
 		section.att-device
 			.container.content
-				h2 Device Serial  No:  5086496416
+				h2.back Device Serial  No:  5086496416
+					a.back-arr(href="")
 					a(href="#").info
-
 				.dev-head
 					.inline-layout.col-2
 						ul.inline-layout.nav-links
 							li
 								a(href="#") Device
 							li
-								a(href="#").active Statistics
+								a(href="#").active Statistics and Log
 						ul.edit.inline-layout
 							li
 								a(href="#") Edit device
@@ -47,118 +47,119 @@ html(lang='ru')
 									input.ui-piker
 								.date-piker
 									input.ui-piker
-						.data-holder.stat
-							table.close
-								tbody
-									tr
-										td
-										td To Device
-										td From Device
-										td Total
-									tr.spend
-										td
-											span SMS Count
-										td 34
-										td 37
-										td 71
-									mixin newTablItem(count, to, from1, total)
+						.scroll-holder
+							.data-holder.stat
+								table.close
+									tbody
 										tr
-											td= count
-											td= to
-											td= from1
-											td= total
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									tr
-										td
-											a(href="#").t-btn more...
-							table.close
-								tbody
-									tr.spend
-										td
-											span Traffic Spent
-										td 34
-										td 37
-										td 71
-									mixin newTablItem(count, to, from1, total)
+											td
+											td To Device
+											td From Device
+											td Total
+										tr.spend
+											td
+												span SMS Count
+											td 34
+											td 37
+											td 71
+										mixin newTablItem(count, to, from1, total)
+											tr
+												td= count
+												td= to
+												td= from1
+												td= total
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
 										tr
-											td= count
-											td= to
-											td= from1
-											td= total
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									+newTablItem(
-										'2016-21-12',
-										'7',
-										'8',
-										'15'
-									)
-									tr
-										td
-											a(href="#").t-btn more...
+											td
+												a(href="#").t-btn more...
+								table.close
+									tbody
+										tr.spend
+											td
+												span Traffic Spent
+											td 34
+											td 37
+											td 71
+										mixin newTablItem(count, to, from1, total)
+											tr
+												td= count
+												td= to
+												td= from1
+												td= total
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										+newTablItem(
+											'2016-21-12',
+											'7',
+											'8',
+											'15'
+										)
+										tr
+											td
+												a(href="#").t-btn more...
 
 
 
@@ -178,142 +179,143 @@ html(lang='ru')
 									input.ui-piker
 								.date-piker
 									input.ui-piker
-						.data-holder.log
-							table
-								tbody
-									mixin newTablItem(count, to, from1, total, ttl)
-										tr
-											td= count
-											td= to
-											td= from1
-											td= total
-											td= ttl
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
-									+newTablItem(
-										'2016-21-12 09:30:27',
-										'OUT',
-										'Alert',
-										'Device left its fence area.',
-										'Yacht: Princess Viking'
-									)
+						.scroll-holder-md
+							.data-holder.log
+								table
+									tbody
+										mixin newTablItem(count, to, from1, total, ttl)
+											tr
+												td= count
+												td= to
+												td= from1
+												td= total
+												td= ttl
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
+										+newTablItem(
+											'2016-21-12 09:30:27',
+											'OUT',
+											'Alert',
+											'Device left its fence area.',
+											'Yacht: Princess Viking'
+										)
 
 
 

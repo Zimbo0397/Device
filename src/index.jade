@@ -7,137 +7,150 @@ html(lang='ru')
 
 	body
 		include ./partials/noscript.jade
-		include ./partials/header.jade
+		include ./partials/header-no-search.jade
 		
 		section.registered
 			.container
 				h3 Registered devices
-
-				.devices-table
-					table
-						tbody
-							tr
-								td Serial No
-								td.name
-									span Name
-								td
-								td.desc Description
-								td.plan
-									.select-holder
-										span Asset Plan
-										select#sel(name="")
-											option(value="All", selected) All
-											option(value="Stayin") Stay in Fence
-											option(value="Dono") Do Nothing
-											option(value="Dnm") Don`t Move
-											option(value="TrH") Track History
-								td.status
-									.select-holder
-										span Alarm Status
-										select#sel1(name="")
-											option(value="All", selected) All
-											option(value="Red") Red
-											option(value="Green") Green
-											option(value="Gray") Gray
-											option(value="Red-low") Red-low
-											option(value="Green-low") Green-low
-											option(value="Gray-low") Gray-low
-							mixin newDeviceTableItem(href, serial, name, description, src, plan, status)
-								tr(data-href= href)
-									td= serial
-									td.name= name
+				
+				.table-search
+					.navigation
+						.search-holder
+							form(action="")
+								label(for="") Search device
+								.search-wrap
+									input(type="text", placeholder="Serial No, Name")
+									a(href="")
+						.selects-holder
+							.inline-layout
+								.select-holder
+									select#sel(name="")
+										option(value="All", selected) All
+										option(value="Stayin") Stay in Fence
+										option(value="Dono") Do Nothing
+										option(value="Dnm") Don`t Move
+										option(value="TrH") Track History
+								.select-holder
+									select#sel1(name="")
+										option(value="All", selected) All
+										option(value="Red") Red
+										option(value="Green") Green
+										option(value="Gray") Gray
+										option(value="Red-low") Red-low
+										option(value="Green-low") Green-low
+										option(value="Gray-low") Gray-low
+				.scroll-holder-lg
+					.devices-table
+						table
+							tbody
+								tr
+									td Serial No
+									td.name
+										span Name
 									td
-										.image-holder
-											img(src= src, alt="")
-									td.desc
-										.description
-											span= description
-									td.plan= plan
+									td.desc Description
+									td.plan
+										span Asset Plan
+										
 									td.status
-										.status-icon(class= status)
+										span Alarm Status
+										
+								mixin newDeviceTableItem(href, serial, name, description, src, plan, status)
+									tr(data-href= href)
+										td= serial
+										td.name= name
+										td
+											.image-holder
+												img(src= src, alt="")
+										td.desc
+											.description
+												span= description
+										td.plan= plan
+										td.status
+											.status-icon(class= status)
 
 
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/boat-1.jpg',
-								'Stay in Fence',
-								'st-red'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/car-1.jpg',
-								'Stay in Fence',
-								'st-gray low'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/gun-1.jpg',
-								'Stay in Fence',
-								'st-red'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/gun-2.jpg',
-								'Stay in Fence',
-								'st-red'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/gun-2.jpg',
-								'Stay in Fence',
-								'st-green low'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/car-1.jpg',
-								'Stay in Fence',
-								'st-green low'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/boat-1.jpg',
-								'Stay in Fence',
-								'st-red'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/boat-1.jpg',
-								'Stay in Fence',
-								'st-green'
-							)
-							+newDeviceTableItem(
-								'index.html',
-								'2345466544',
-								'Yach: Princess Viking',
-								'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
-								'img/content/boat-1.jpg',
-								'Stay in Fence',
-								'st-gray'
-							)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/boat-1.jpg',
+									'Stay in Fence',
+									'st-red'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/car-1.jpg',
+									'Stay in Fence',
+									'st-gray low'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/gun-1.jpg',
+									'Stay in Fence',
+									'st-red'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/gun-2.jpg',
+									'Stay in Fence',
+									'st-red'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/gun-2.jpg',
+									'Stay in Fence',
+									'st-green low'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/car-1.jpg',
+									'Stay in Fence',
+									'st-green low'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/boat-1.jpg',
+									'Stay in Fence',
+									'st-red'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/boat-1.jpg',
+									'Stay in Fence',
+									'st-green'
+								)
+								+newDeviceTableItem(
+									'index.html',
+									'2345466544',
+									'Yach: Princess Viking',
+									'Yacht: Value $1,850,000 - Naples,FL 2007 Princess Viking Sport Cruiser Flybridge Motor Yacht. HIN:8KJ290DF1S25',
+									'img/content/boat-1.jpg',
+									'Stay in Fence',
+									'st-gray'
+								)
 
 
 				.btn-holder
